@@ -87,7 +87,7 @@ function seleccionarOpcion(){
         echo "\n ( 4 ) Mostrar la informacion completa de un numero de juego"; 
         echo "\n ( 5 ) Mostrar la informacion del primer juego con mas puntaje "; 
         echo "\n ( 6 ) Mostrar la informacion del primer juego que supere un puntaje indicado por el usuario"; 
-        echo "\n ( 7 ) Mostrar la lista de palabras ordenadas por alfabeto"; 
+        echo "\n ( 7 ) Mostrar la lista de palabras ordenadas por alfabeto de mayor a menor"; 
         echo "\n ( 8 ) Salir"; 
         echo "\n        ";
         $opcion = trim(fgets(STDIN));
