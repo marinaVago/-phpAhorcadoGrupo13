@@ -76,6 +76,7 @@ function dividirPalabraEnLetras($palabra)
 /**
 * muestra y obtiene una opcion de menú ***válida***
 * @return int
+* int $opcion
 **/
 function seleccionarOpcion(){
     do
@@ -517,7 +518,6 @@ function ordenarPalabras($coleccionPalabras)
     for ($i = 0; $i < $cantPal; $i++)
   {
       //imprime cada elemento de la coleccion de mayor a menor
-      //print_r imprime en pantalla información legible acerca de una variable
       print_r($coleccionPalabras[$i]);
        echo " \n ";
     }
@@ -546,7 +546,7 @@ do{
 
     //Se ejecuta el numero de opcion elegido por el usuario
     switch ($opcion) {
-    case 1: //Jugar con una palabra aleatoria //usar rand (Genera un número entero aleatorio)
+    case 1: //Jugar con una palabra aleatoria //usar rand (investigar)
 
             //Se invoca a la funcion indiceAleatorioEntre 
             //Esta funcion devuelve un numero aleatorio entre 0 y la cantidad de palabras que existen dentro de la coleccion de palabras
