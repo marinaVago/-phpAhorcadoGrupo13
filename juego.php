@@ -87,7 +87,7 @@ function seleccionarOpcion(){
         echo "\n ( 4 ) Mostrar la informacion completa de un numero de juego"; 
         echo "\n ( 5 ) Mostrar la informacion del primer juego con mas puntaje "; 
         echo "\n ( 6 ) Mostrar la informacion del primer juego que supere un puntaje indicado por el usuario"; 
-        echo "\n ( 7 ) Mostrar la lista de palabras ordenadas por alfabeto de mayor a menor"; 
+        echo "\n ( 7 ) Mostrar la lista de palabras ordenadas por alfabeto de mayor"; 
         echo "\n ( 8 ) Salir"; 
         echo "\n        ";
         $opcion = trim(fgets(STDIN));
@@ -168,6 +168,7 @@ function agregarPalabra($coleccionPalabras)
     //Se comprueba si la palabra ingresada ya existe dentro de la coleccion de palabras
     while($existe)
     {
+    //Solo strings!!
     echo "Ingrese una nueva palabra para adivinar \n";
     $nuevaPalabra = strtolower(trim(fgets(STDIN)));
     $existe = existePalabra($coleccionPalabras,$nuevaPalabra);
@@ -182,6 +183,7 @@ function agregarPalabra($coleccionPalabras)
     echo "Ingrese la pista para la nueva palabra a adivinar \n";
     $pistaPalabra = strtolower(trim(fgets(STDIN))); 
 
+    //Solo ingresar valores numericos!!!!!
     echo "Ingrese la cantidad de puntos que se ganara con esta palabra \n";
     $puntos = trim(fgets(STDIN));
 
