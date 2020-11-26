@@ -199,12 +199,13 @@ function agregarPalabra($coleccionPalabras)
 * @param int $min
 * @param int $max
 * @return int
+* int $indice
 **/
 function indiceAleatorioEntre($min,$max)
 {   
     //selecciona un numero aleatorio entre los numeros obtenidos por parametro
-    $i = rand($min,$max); 
-    return $i;
+    $indice = rand($min,$max); 
+    return $indice;
 }
 
 /**
@@ -212,14 +213,15 @@ function indiceAleatorioEntre($min,$max)
 * @param int $min
 * @param int $max
 * @return int
+* int $indice
 **/
 function solicitarIndiceEntre($min,$max){ 
     do{
         echo "Seleccione un valor entre $min y $max: ";
-        $i = trim(fgets(STDIN));
-    }while(!($i>=$min && $i<=$max));
+        $indice = trim(fgets(STDIN));
+    }while(!($indice>=$min && $indice<=$max));
     
-    return $i;
+    return $indice;
 }
 
 
@@ -424,7 +426,7 @@ function mostrarPalabra($coleccionPalabras,$indicePalabra)
     echo "  pista: ".$coleccionPalabras[$indicePalabra]["pista"]."\n";
     echo "  ganaPuntos: ".$coleccionPalabras[$indicePalabra]["ganaPuntos"]."\n";
   
-    //Otra opcion :
+    //Otra opcion, no la usamos ya que no nos convence que imprima "array", la otra opcion es mas parecida al ejemplo original :
     // print_r($coleccionPalabras[$indicePalabra]);  
 }
 
@@ -545,6 +547,7 @@ do{
     $opcion = seleccionarOpcion();
 
     //Se ejecuta el numero de opcion elegido por el usuario
+    //Switch es una instruccion alternativa que nos permite elegir a cual de las opciones entrar
     switch ($opcion) {
     case 1: //Jugar con una palabra aleatoria //usar rand (investigar)
 
