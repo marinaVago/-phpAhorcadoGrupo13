@@ -39,7 +39,7 @@ function cargarJuegos()
 {
 	$coleccionJuegos = array();
 	$coleccionJuegos[0] = array("puntos"=> 0, "indicePalabra" => 1);
-	$coleccionJuegos[1] = array("puntos"=> 10,"indicePalabra" => 2);
+	$coleccionJuegos[1] = array("puntos"=> 6,"indicePalabra" => 2);
     $coleccionJuegos[2] = array("puntos"=> 0, "indicePalabra" => 1);
     $coleccionJuegos[3] = array("puntos"=> 8, "indicePalabra" => 0);
     $coleccionJuegos [4] = array("puntos"=> 0, "indicePalabra" => 7); 
@@ -364,7 +364,7 @@ function jugar($coleccionPalabras, $indicePalabra, $cantIntentos)
     echo "\n****PISTA : ".$coleccionPalabras[$indicePalabra]["pista"]."*****";
 
     //entra a un bucle hasta que terminen los intentos o hasta que la palabra sea descubierta
-    while($cantIntentos > 0 && $palabraFueDescubierta == false)
+    while($cantIntentos > 0 && !$palabraFueDescubierta)
     {
      //solicita al usuario que adivine la palabra ingresando una letra
      $letra = solicitarLetra();
