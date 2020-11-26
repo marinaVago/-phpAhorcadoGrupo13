@@ -172,13 +172,23 @@ function agregarPalabra($coleccionPalabras)
     //Solo strings!!
     echo "Ingrese una nueva palabra para adivinar \n";
     $nuevaPalabra = strtolower(trim(fgets(STDIN)));
+    
+    //La palabra debe contener al menos 2 caracteres
+    if(strlen($nuevaPalabra)<2)
+    {
+    echo "La palabra ingresada debe contener al menos 2 letras\n";
+    }
+    //Si la palabra contiene al menos dos caracteres se verifica si la palabra existe dentro del arreglo de palabras
+    else
+    {
     $existe = existePalabra($coleccionPalabras,$nuevaPalabra);
-
+    }
     //Si la palabra ya existe se lo comunica al usuario
-    if($existe)
+    if($existe && strlen($nuevaPalabra)> 1)
         {
             echo "La palabra ingresada ya existe \n";
         }
+        
     }
 
     echo "Ingrese la pista para la nueva palabra a adivinar \n";
